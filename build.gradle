@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id "org.flywaydb.flyway" version "8.0.4"
+}
+
+group = 'com.thoughtworks.com'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.0'
+    implementation 'org.flywaydb:flyway-core:8.5.12'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools:2.7.0'
+    runtimeOnly 'com.h2database:h2:2.1.212'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.29'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
